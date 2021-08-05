@@ -112,7 +112,7 @@ class C_create_invoice extends MX_Controller {
             $row[] = $row_list->check_no;
             $row[] = number_format($row_list->check_amount);
             $row[] = $this->logs->show_logs_record_datatable($row_list);
-            $row[] = '<a href="'.base_url().'invoice/C_create_invoice/print_preview/'.$row_list->id.'" target="_blank" class="btn btn-xs btn-inverse"><i class="fa fa-print"></i></a>';
+            $row[] = '<a onclick="PopupCenter('."'".base_url()."invoice/C_create_invoice/print_preview/".$row_list->id."'".', '."'PRINT PREVIEW'".', 750, 550)" href="#" class="btn btn-xs btn-inverse"><i class="fa fa-print"></i></a>';
 
             $data[] = $row;
         }
